@@ -65,7 +65,7 @@ As part of a web development team, I was responsible for:
 
 ## 📷 Preview
 
-(Add screenshots or demo link here)
+
 
 ---
 
