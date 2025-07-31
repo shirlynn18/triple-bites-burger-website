@@ -1,0 +1,313 @@
+/* Card profile section */
+section.card {
+    max-width: 600px;
+    margin: 190px auto 100px;
+    padding: 50px 50px;
+    background-color: #fff3e6;
+    border: 2px solid #5a392d;
+    border-radius: 40px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+section.card h2 {
+    color: #4e2c1e;
+    margin: -8px auto 6px;
+    font-size: clamp(30px, 4vw, 36px);
+}
+
+section.card p {
+    color: #9c705f;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+/* Profile picture */
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border: 3px solid #8b4513;
+    border-radius: 50%;
+    background: url(images/cat_profile.png) center/cover no-repeat;
+    background-color: #f0dbbd;
+    margin: 10px auto 30px;
+    position: relative;
+}
+
+.edit-icon {
+    position: absolute;
+    bottom: -4px;
+    right: -10px;
+    background: #fff;
+    border: 2px solid #8b4513;
+    border-radius: 50%;
+    padding: 0px;
+    width: clamp(12px, 4vw, 30px);
+    height: clamp(12px, 4vw, 30px);
+    object-fit: contain;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+
+/* Select Profile */
+.pic-select-modal {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.pic-select-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #fff8ee;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 400px;
+}
+
+.pic-options {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pic-options img {
+    width: 25%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pic-options img:hover {
+    border-color: #8b4513;
+    transform: scale(1.1);
+}
+
+#closePicModal {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #7d4c38;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* UserID */
+.user-id-text {
+    font-size: 16px;
+    color: #7d4c38;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Form input section */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 4vw, 27px);
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    margin-bottom: clamp(12px, 2.5vw, 20px);
+    text-align: left;
+}
+
+.input-group label {
+    position: absolute;
+    top: -17px;
+    left: 0px;
+    padding: 0 clamp(3px, 1vw, 5px);
+    font-size: clamp(12px, 1.2vw, 14px);
+    font-weight: 100;
+    color: #8b5e3c;
+}
+
+.input-group input {
+    width: 100%;
+    height: clamp(24px, 4vh, 30px);
+    padding: clamp(8px, 2vw, 12px) clamp(8px, 2vw, 12px) clamp(8px, 2vw, 12px) clamp(40px, 6vw, 60px);
+    border: none;
+    border-radius: 50px;
+    background-color: #fcd29f;
+    color: #5a3c2a;
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: bold;
+    transition: border 0.3s;
+}
+
+.input-group input:focus {
+    outline: 2px solid #e9a74b;
+    background-color: #ffe3ba;
+}
+
+.input-group .input-icon {
+    position: absolute;
+    top: 50%;
+    left: clamp(12px, 2vw, 16px);
+    transform: translateY(-50%);
+    width: clamp(30px, 4vw, 40px);
+    height: auto;
+    pointer-events: none;
+}
+
+.row-input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(12px, 3vw, 20px);
+    flex-wrap: wrap;
+}
+
+.row-input-group .input-group {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Save changes button */
+.submit-btn {
+    width: 100%;
+    height: clamp(50px, 9vh, 70px);
+    padding: clamp(10px, 9vw, 14px);
+    margin-top: clamp(6px, 1.5vw, 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(20px, 5vw, 30px);
+    font-weight: bold;
+    background-color: #7d4c38;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.submit-btn .left-icon {
+    margin-right: 4px; 
+    width: clamp(40px, 3vw, 80px); 
+    height: auto;
+}
+
+.submit-btn .right-icon {
+    margin-left: 4px; 
+    width: clamp(40px, 3vw, 80px);
+    height: auto;
+}
+
+.submit-btn:hover {
+    background-color: #6d3e2f;
+}
+
+.input-group > input,
+.input-group > label {
+    align-self: stretch;
+}
+
+.input-group > div[id$="-error"] {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    margin-top: 4px;
+    font-size: 13px;
+    color: #b30000;
+    background: #ffe6e6;
+    padding: 4px 10px 4px 25px;
+    border-left: 4px solid #ff4d4d;
+    border-radius: 6px;
+    z-index: 20;
+    display: none;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    background-image: url(../images/error.svg);
+    background-repeat: no-repeat;
+    background-position: 6px center;
+    background-size: 16px;
+}
+
+.input-group.error > div[id$="-error"] {
+    display: block;
+}
+
+/* Logout Section */
+.logout-section {
+    margin: 32px auto 32px;
+    text-align: center;
+}
+
+.logout-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: clamp(8px, 2.5vw, 12px) clamp(16px, 5vw, 24px);
+    border: none;
+    border-radius: 12px;
+    font-size: clamp(14px, 1.5vw, 16px);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: clamp(5px, 1.2vw, 8px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #c0392b;
+}
+
+.logout-btn img {
+    width: clamp(40px, 2vw, 70px);
+    height: clamp(40px, 2vw, 70px);
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media queries */
+/* For mobiles */
+@media (max-width: 768px) {
+    section.card {
+        width: 80%;
+        padding: 50px 15px;
+        margin: clamp(150px, 30vw, 170px) auto clamp(30px, 6vw, 50px);
+    }
+
+    form {
+        gap: 30px; 
+    }
+
+    .row-input-group {
+        flex-direction: column; 
+        gap: 30px; 
+    }
+
+    .row-input-group .input-group {
+        width: 100%;
+    }
+}

@@ -1,0 +1,320 @@
+/* Reset box-sizing for all elements */
+.auth-wrapper *, .auth-wrapper *::before, .auth-wrapper *::after {
+    box-sizing: border-box;
+}
+
+/* Base styling */
+.auth-wrapper {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: clamp(16px, 4vw, 32px) clamp(8px, 4vw, 16px);
+    position: relative;
+    color: #5a321b;
+    font-family: 'Inter', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.auth-wrapper .container {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 5px clamp(20px, 6vw, 40px) 5px;
+    background: #fff7e6;
+    border-radius: 16px;
+    box-shadow: 0 12px 36px rgba(101, 67, 33, 0.18);
+}
+
+.auth-wrapper header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    user-select: none;
+}
+
+.auth-wrapper .brand {
+    font-weight: 700;
+    font-size: clamp(16px, 2vw, 20px);
+    color: #7a4e1c;
+    letter-spacing: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-wrapper header .brand img {
+    width: clamp(80px, 20vw, 120px);
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+    margin-bottom: -20px;
+}
+
+/* Login/SignUp Title */
+.auth-wrapper header h1 {
+    font-weight: 700;
+    font-size: clamp(24px, 5vw, 36px);
+    color: #4b2e05;
+    margin: 10px auto;
+    white-space: nowrap;
+}
+
+.auth-wrapper .signup-h1 {
+    margin: 10px auto;
+}
+
+/* Form */
+.auth-wrapper form {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 6vw, 35px);
+}
+
+/* Group wrapper for icon, input, label */
+.auth-wrapper .input-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Input fields */
+.auth-wrapper input[type="text"],
+.auth-wrapper input[type="email"],
+.auth-wrapper input[type="tel"],
+.auth-wrapper input[type="password"] {
+    width: 100%;
+    padding: 12px 16px 14px 48px;
+    border: 2px solid #d7b789;
+    border-radius: 16px;
+    background-color: #fff4db;
+    font-size: clamp(14px, 1.8vw, 16px);
+    color: #4b2e05;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline-offset: 2px;
+}
+
+/* On focus */
+.auth-wrapper input[type="text"]:focus,
+.auth-wrapper input[type="email"]:focus,
+.auth-wrapper input[type="tel"]:focus,
+.auth-wrapper input[type="password"]:focus {
+    outline: none;
+    border-color: #d94f00;
+    box-shadow: 0 0 0 4px rgba(217, 79, 0, 0.3);
+}
+
+/* Input labels */
+.auth-wrapper label {
+    position: absolute;
+    left: 50px;
+    top: 16px;
+    padding: 0 6px;
+    font-size: 14px;
+    color: #a97449;
+    pointer-events: none;
+    user-select: none;
+    background-color: #fff4db;
+}
+
+/* Floating label effect */
+.auth-wrapper input:not(:placeholder-shown) + label,
+.auth-wrapper input:focus + label {
+    top: -8px;
+    left: 38px;
+    font-size: 12px;
+    color: #d94f00;
+    font-weight: 700;
+}
+
+/* Ensure same width */
+.auth-wrapper .input-group > input,
+.auth-wrapper .input-group > label {
+    align-self: stretch;
+}
+
+/* Submit button */
+.auth-wrapper input[type="submit"] {
+    padding: clamp(12px, 3vw, 16px);
+    background-color: #744c24;
+    color: #fff5e1;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: clamp(16px, 2vw, 18px);
+    font-weight: 700;
+    user-select: none;
+}
+
+.auth-wrapper input[type="submit"]:hover,
+.auth-wrapper input[type="submit"]:focus-visible {
+    background-color: #a26e3d;
+    box-shadow: 0 10px 20px rgba(162, 110, 61, 0.6);
+    outline: none;
+}
+
+/* Footer */
+.auth-wrapper .form-footer {
+    margin-top: 15px;
+    font-size: clamp(12px, 1.5vw, 14px);
+    text-align: center;
+}
+
+.auth-wrapper .form-footer a {
+    color: #d94f00;
+    font-size: clamp(12px, 1.5vw, 14px);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.auth-wrapper .form-footer a:hover {
+    color: #4b2e05;
+    outline: none;
+}
+
+/* Error message box */
+.auth-wrapper .input-group > div[id$="-error"] {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    margin-top: 4px;
+    font-size: 13px;
+    color: #b30000;
+    background: #ffe6e6;
+    padding: 4px 10px 4px 25px;
+    border-left: 4px solid #ff4d4d;
+    border-radius: 6px;
+    z-index: 20;
+    display: none;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    background-image: url(../images/error.svg);
+    background-repeat: no-repeat;
+    background-position: 6px center;
+    background-size: 16px;
+}
+
+.auth-wrapper .input-group.error > div[id$="-error"] {
+    display: block;
+}
+
+/* Modal */
+.auth-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 16px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.auth-modal-content {
+    background-color: #fff7e6;
+    padding: clamp(16px, 5vw, 24px);
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    font-size: clamp(14px, 2vw, 16px);
+    box-sizing: border-box;
+}
+
+.auth-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: clamp(22px, 4vw, 28px);
+    cursor: pointer;
+    z-index: 999;
+}
+
+#popupModal.auth-modal {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 650px) {
+    .auth-wrapper {
+        padding: 16px 12px;
+    }
+
+    .auth-wrapper .container {
+        padding: 10px 16px;
+        border-radius: 12px;
+        box-shadow: none; 
+    }
+
+    .auth-wrapper header h1 {
+        font-size: 24px; 
+    }
+
+    .auth-wrapper .input-group {
+        margin-bottom: 6px; 
+    }
+
+    .auth-wrapper input[type="text"],
+    .auth-wrapper input[type="email"],
+    .auth-wrapper input[type="tel"],
+    .auth-wrapper input[type="password"] {
+        font-size: 14px;
+        padding: 10px 18px 12px 44px;
+    }
+
+    .auth-wrapper label {
+        left: 44px;
+        top: 12px;
+        font-size: 13px;
+    }
+
+    .auth-wrapper input:not(:placeholder-shown) + label,
+    .auth-wrapper input:focus + label {
+        top: -6px;
+        left: 32px;
+        font-size: 11px;
+    }
+
+    .auth-wrapper .form-footer {
+        font-size: 14px;
+    }
+
+    .auth-wrapper .form-footer a {
+        font-size: 14px;
+    }
+
+    .auth-modal-content {
+        padding: 16px;
+        font-size: 14px;
+    }
+
+    .auth-close {
+        font-size: 22px;
+    }
+}
