@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIPLE BITES</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+    <header>
+        <!-- Top Navigation Bar -->
+        <div class="nav-bar">
+            <!-- Clickable logo -->
+            <img id="nav-logoIcon" src="images/logo.png" alt="Triple Bites Logo">
+            
+            <div id="nav-profileBox" class="nav-floating-profile">
+                <div class="nav-profile-header">
+                    <img id="nav-floatingProfilePic" src="images/cat_profile.png" alt="User Profile" class="nav-profile-pic">
+                    <div>
+                        <div id="nav-profileName" class="nav-profile-name">Username</div>
+                        <div id="nav-profileId" class="nav-profile-id">ID: #0001</div>
+                    </div>
+                </div>
+                
+                <div class="nav-profile-links">
+                    <a href="cart.html" class="nav-profile-link">Track Order</a>
+                    <a href="account.html" class="nav-profile-link">Edit Profile</a>
+                    <button id="nav-logoutBtn" class="nav-logout-btn">Logout</button>
+                </div>
+            </div>
+            
+            <nav>
+                <ul class="top-nav" id="top-nav-r">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="deals_rewards.html">Deals & Rewards</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li class="menu-bar" onclick="navFunction()">
+                        <a href="javascript:void(0);">
+                            <img src="images/menu_bar.png" alt="Menu Bar" title="Menu Bar" style="width: 25px">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>ABOUT US</h1>
+            
+            <div class="right-col">
+                <div class="search-box" title="Search">
+                    <input type="text" placeholder="Search products..." class="search-input">
+                    <button class="search-icon"><img src="images/search_icon.png" alt="Search"></button>
+                </div>
+
+                <a href="cart.html" class="cart" title="View Cart">
+                    <img src="images/cart_icon.png" alt="Cart">
+                    <span id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- MEET THE FOUNDERS SECTION -->
+        <section class="founders-section">
+            <div class="section-title-bar">
+                <div class="highlight-bar"></div>
+                <h2 class="section-title">Meet The Founders</h2>
+            </div>
+            
+            <div class="founders-container">
+                <!-- FOUNDER 1 -->
+                <div class="founder-box">
+                    <img src="images/Ximun.jpg" alt="Lim Ximun" class="founder-img">
+                    <div class="founder-info">
+                        <h3>Lim Ximun - Founder</h3>
+                        <p>Ximun is the creative force behind TRIPLE BITES. As someone who grew up loving street food, night markets and quick snacks full of flavor, she dreamed of opening a place where people could find amazing, delicious meals without the long wait. With a deep love for food, casual dining and quality ingredients, Ximun started TRIPLE BITES to shake up the fast food scene — proving that "quick" and "tasty" can go hand-in-hand.</p>
+                    </div>
+                </div>
+                
+                <!-- FOUNDER 2 -->
+                <div class="founder-box">
+                    <img src="images/zhien.jpeg" alt="Tan Zhi En" class="founder-img">
+                    <div class="founder-info">
+                        <h3>Tan Zhi En - Co-Founder</h3>
+                        <p>Zhi En is the heart of operations at TRIPLE BITES. With a background in hospitality and customer experience, she makes every guest feel at home. Her passion lies in creating warm and welcoming dining atmospheres. She believes in fast service, friendly faces and clean inviting spaces. Her goal at TRIPLE BITES is to make sure every guest leaves satisfied and happy, whether they're dining in or grabbing a bite on the go.</p>
+                    </div>
+                </div>
+                
+                <!-- FOUNDER 3 -->
+                <div class="founder-box">
+                    <img src="images/shirlynn.jpeg" alt="Shirlynn" class="founder-img">
+                    <div class="founder-info">
+                        <h3>Shirlynn Chung Kai Qing - Chairperson</h3>
+                        <p>As the Chairperson of TRIPLE BITES, Shirlynn brings both leadership and heart to the table. With extensive experience in business management and brand building, she ensures that TRIPLE BITES continues to grow and thrive. Her leadership style inspires her team to care about their work, their people and their customers in building a brand that champions quality, trust and community.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- OUR STORY SECTION -->
+        <section class="our-story">
+            <div class="section-title-bar">
+                <div class="highlight-bar"></div>
+                <h2 class="section-title">Our Story</h2>
+            </div>
+            
+            <div class="content-card">
+                <div class="image-container">
+                    <img src="images/restaurant.jpeg" alt="Triple Bites Shopfront">
+                    <div class="flavor-dot dot-1"></div>
+                    <div class="flavor-dot dot-2"></div>
+                    <div class="flavor-dot dot-3"></div>
+                    <div class="flavor-dot dot-4"></div>
+                </div>
+                
+                <div class="text-container">
+                    <h3>Our Journey</h3>
+                    <p class="story-text">
+                        TRIPLE BITES began with a simple question: why settle for fast food that's bland and forgettable? Our founders wanted to offer something different — a place where speed meets flavor, where every bite delivers real satisfaction. <br><br>
+                        From the very beginning, our mission has been simple: to reimagine fast meals with bold flavor. No frozen patties, no soggy buns — just real food, made with passion for people on the move. Whether you're craving crispy fried wings, juicy burgers or signature sauces you won't find anywhere else, we've got you. <br><br>
+                        Our mission stays the same: Good food. Fast. With flavor that sticks with you.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- BRAND PHILOSOPHY SECTION -->
+        <section class="our-story">
+            <div class="section-title-bar">
+                <div class="highlight-bar"></div>
+                <h2 class="section-title">Brand Philosophy</h2>
+            </div>
+            
+            <div class="content-card">
+                <div class="image-container">
+                    <img src="images/philosophy.jpg" alt="Brand Philosophy">
+                    <div class="flavor-dot dot-1"></div>
+                    <div class="flavor-dot dot-2"></div>
+                    <div class="flavor-dot dot-3"></div>
+                    <div class="flavor-dot dot-4"></div>
+                </div>
+                
+                <div class="text-container">
+                    <h3>Our Core Values</h3>
+                    <p class="story-text">
+                        At <strong>TRIPLE BITES</strong>, we believe fast food should never feel like a compromise. Our brand is built on three core principles: <br><br>
+                        <strong>Freshness</strong> – We prepare ingredients daily to ensure every bite bursts with flavor. <br>
+                        <strong>Speed</strong> – We serve quickly without cutting corners. <br>
+                        <strong>Flavor</strong> – Our recipes are bold, satisfying and made to stand out. <br><br>
+                        We want every meal to feel like a little celebration — affordable, fast, but full of taste and care.
+                        Whether you're a student on the go, a family on a weekend outing, or someone grabbing a late-night snack,
+                        <strong>TRIPLE BITES</strong> is here to serve you something special.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CHEF TEAM SECTION -->
+        <section class="our-story">
+            <div class="section-title-bar">
+                <div class="highlight-bar"></div>
+                <h2 class="section-title">Meet Our Chef Team</h2>
+            </div>
+            
+            <div class="content-card">
+                <div class="image-container">
+                    <img src="images/chef team.jpg" alt="Chef Team">
+                    <div class="flavor-dot dot-1"></div>
+                    <div class="flavor-dot dot-2"></div>
+                    <div class="flavor-dot dot-3"></div>
+                    <div class="flavor-dot dot-4"></div>
+                </div>
+                
+                <div class="text-container">
+                    <h3>Culinary Experts</h3>
+                    <p class="story-text">
+                        Behind the counter, our kitchen team works like a well-oiled machine. But it's not just about speed — it's about heart.
+                        Every team member is trained to maintain consistency, safety and presentation, even during the busiest rush. <br><br>
+                        Our chefs come from different culinary backgrounds, from street food stalls to modern kitchens and they all share one thing:
+                        a passion for bold flavors and satisfying meals. Whether they're crafting our signature sauces or perfecting the crisp on our fries,
+                        they're focused on delivering food that exceeds expectations.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FOOD SAFETY SECTION -->
+        <section class="our-story">
+            <div class="section-title-bar">
+                <div class="highlight-bar"></div>
+                <h2 class="section-title">Ingredients & Food Safety</h2>
+            </div>
+            
+            <div class="content-card">
+                <div class="image-container">
+                    <img src="images/safety.jpg" alt="Ingredients and Food Safety">
+                    <div class="flavor-dot dot-1"></div>
+                    <div class="flavor-dot dot-2"></div>
+                    <div class="flavor-dot dot-3"></div>
+                    <div class="flavor-dot dot-4"></div>
+                </div>
+                
+                <div class="text-container">
+                    <h3>Quality & Safety</h3>
+                    <p class="story-text">
+                        We believe you deserve to know what's going into your food and we take that responsibility seriously.
+                        That's why we partner with trusted suppliers to bring in fresh vegetables, quality meat and ingredients that meet safety standards. <br><br>
+                        Our kitchen follows strict hygiene practices, including regular sanitization, food temperature checks and proper handling procedures.
+                        Every team member is trained in food safety protocols because your health and trust matter to us. <br><br>
+                        From prepare to plate, we prioritize quality, cleanliness and care — so you can enjoy your food worry-free every time.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="bottom-nav">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="deals_rewards.html">DEALS & REWARDS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="account.html">ACCOUNT</a></li>
+        </ul>
+        
+        <div class="footer-wrapper">
+            <div class="logo2">
+                <img src="images/logo.png" alt="Triple Bites Logo">
+            </div>
+            
+            <div class="hours">
+                <p>OPENING HOURS</p>
+                <P>
+                    MON-FRI: 10:00 AM - 10:00 PM<br><br>
+                    SAT-SUN: 11:00 AM - 11:00 PM
+                </P>
+            </div>
+            
+            <div class="contact">
+                <p>CONTACT</p>
+                <a href="https://www.whatsapp.com/" target="_blank">
+                    <img src="images/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="images/youtube.png" alt="Youtube">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/basic.js"></script>
+</body>
+</html>

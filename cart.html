@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIPLE BITES</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body> 
+    <div class="nav-bar">
+        <!-- Clickable logo -->
+        <img id="nav-logoIcon" src="images/logo.png" alt="Triple Bites Logo">
+
+        <div id="nav-profileBox" class="nav-floating-profile">
+            <div class="nav-profile-header">
+                <img id="nav-floatingProfilePic" src="images/cat_profile.png" alt="User Profile" class="nav-profile-pic">
+                <div>
+                    <div id="nav-profileName" class="nav-profile-name">Username</div>
+                    <div id="nav-profileId" class="nav-profile-id">ID: #0001</div>
+                </div>
+            </div>
+            
+            <div class="nav-profile-links">
+                <a href="cart.html" class="nav-profile-link">Track Order</a>
+                <a href="account.html" class="nav-profile-link">Edit Profile</a>
+                <button id="nav-logoutBtn" class="nav-logout-btn">Logout</button>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="top-nav" id="top-nav-r">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="deals_rewards.html">Deals & Rewards</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li class="menu-bar" onclick="navFunction()">
+                    <a href="javascript:void(0);">
+                        <img src="images/menu_bar.png" alt="Menu Bar" title="Menu Bar" style="width: 25px">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>VIEW CART</h1>
+        
+        <div class="right-col">
+            <div class="search-box" title="Search">
+                <input type="text" placeholder="Search products..." class="search-input">
+                <button class="search-icon"><img src="images/search_icon.png" alt="Search"></button>
+            </div>
+
+            <a href="cart.html" class="cart" title="View Cart">
+                <img src="images/cart_icon.png" alt="Cart">
+                <span id="cartCount">0</span>
+            </a>
+        </div>
+    </div>
+
+    <main class="cart-wrapper">
+    </main>
+
+    <!-- Popup message box -->
+    <div id="message" class="message">
+        <p></p>
+    </div>
+
+    <div class="cart-bar">
+        <span>TOTAL: RM 20.70</span>
+        <button onclick="open_modal()" class="order-btn">Place Order</button>
+    </div>
+
+    <!-- modal 1 - order method -->
+    <div id="method" class="background">
+        <div class="modal-1">
+            <span onclick="close_modal()" class="close-btn" title="Close">&times;</span>
+            <h2>How would you like to get your order?</h2>
+
+            <div class="option-box">
+                <div onclick="selectOption('pickup')" class="order-method">
+                    <img src="images/pickup.png" alt="Self Pickup">
+                    <span>SELF PICKUP</span>
+                </div>
+
+                <div onclick="selectOption('delivery')" class="order-method">
+                    <img src="images/delivery.png" alt="Delivery">
+                    <span>DELIVERY</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal 2 - when user selects self pickup -->
+    <div id="for_pickup" class="background">
+        <div class="modal-2">
+            <span onclick="close_modal()" class="close-btn" title="Close">&times;</span>
+            <h2>CONFIRM ORDER</h2>
+
+            <form onsubmit="return confirm()">
+                <div class="pickup-box">
+                    <label for="store">Select a Store:</label>
+                    <select id="store" name="store" required>
+                        <option value="" disabled selected>-- Select a Store --</option>
+                        <option value="location1">Triple Bites - Sunway Pyramid</option>
+                        <option value="location2">Triple Bites - Mid Valley Megamall</option>
+                        <option value="location3">Triple Bites - Pavilion KL</option>
+                        <option value="location4">Triple Bites - IOI City Mall</option>
+                        <option value="location5">Triple Bites - Sunway Velocity Mall</option>
+                    </select>
+
+                    <label for="payment">Select a Payment Method:</label>
+                    <select id="payment_pickup" name="payment" required>
+                        <option value="" disabled selected>-- Select a Payment Method --</option>
+                        <option value="cash">Cash (pay at counter)</option>
+                        <option value="bank">Online Banking</option>
+                        <option value="card">Credit/Debit Card</option>
+                        <option value="e-wallet">Touch 'n Go eWallet</option>
+                    </select>
+
+                    <label for="remarks">Special Remarks (optional):</label>
+                    <textarea id="remarks" name="remarks" placeholder="Write something..." maxlength="200" style="height: 120px;"></textarea>
+                </div>
+                
+                <div class="modal-btn">
+                    <button class="back-btn" type="button" onclick="go_back()">Back</button>
+                    <button id="confirmPickupOrder" class="confirm-btn" type="button">Confirm Order</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- modal 3 - when user selects delivery -->
+    <div id="for_delivery" class="background">
+        <div class="modal-3">
+            <span onclick="close_modal()" class="close-btn" title="Close">&times;</span>
+            <h2>CONFIRM ORDER</h2>
+
+            <form onsubmit="return confirm()">
+                <div class="delivery-box">
+                    <fieldset>
+                        <legend>Delivery Address:</legend>
+
+                        <div class="row">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" value="BurgerLover520" placeholder="Enter Name" required maxlength="30">
+                        </div>
+
+                        <div class="row">
+                            <label for="address1">Address Line 1:</label>
+                            <input type="text" id="address1" name="address1" value="Block 3, Sunway Residence" placeholder="Enter Address" required>
+                        </div>
+
+                        <div class="row">
+                            <label for="address2">Address Line 2:</label>
+                            <input type="text" id="address2" name="address2" value="Bandar Sunway" placeholder="Enter Address" required>
+                        </div>
+
+                        <div class="row">
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="city" value="Subang Jaya" placeholder="Enter City" required>
+                        </div>
+
+                        <div class="row column">
+                            <div class="half">
+                                <label for="state">State:</label>
+                                <input type="text" id="state" name="state" value="Selangor" placeholder="Enter State" required>
+                            </div>
+
+                            <div class="half">
+                                <label for="postcode">Postcode:</label>
+                                <input type="text" id="postcode" name="postcode" value="47500" placeholder="Enter Postcode" pattern="\d{5}" maxlength="5" required>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <label for="payment">Select a Payment Method:</label>
+                    <select id="payment_delivery" name="payment" required>
+                        <option value="" disabled selected>-- Select a Payment Method --</option>
+                        <option value="bank">Online Banking</option>
+                        <option value="card">Credit/Debit Card</option>
+                        <option value="e-wallet">Touch 'n Go eWallet</option>
+                    </select>
+
+                    <label for="remarks">Special Remarks (optional):</label>
+                    <textarea id="remarks" name="remarks" placeholder="Write something..." maxlength="200" style="height: 100px;"></textarea>
+                </div>
+
+                <div class="modal-btn">
+                    <button class="back-btn" type="button" onclick="go_back()">Back</button>
+                    <button id="confirmOrder" class="confirm-btn" type="button">Confirm Order</button>
+                </div>
+            </form> 
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="bottom-nav">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="deals_rewards.html">DEALS & REWARDS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="account.html">ACCOUNT</a></li>
+        </ul>
+
+        <div class="footer-wrapper">
+            <div class="logo2">
+                <img src="images/logo.png" alt="Triple Bites Logo">
+            </div>
+
+            <div class="hours">
+                <p>OPENING HOURS</p>
+                <P>
+                    MON-FRI: 10:00 AM - 10:00 PM<br><br>
+                    SAT-SUN: 11:00 AM - 11:00 PM
+                </P>
+            </div>
+
+            <div class="contact">
+                <p>CONTACT</p>
+                <a href="https://www.whatsapp.com/" target="_blank">
+                    <img src="images/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="images/youtube.png" alt="Youtube">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/basic.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

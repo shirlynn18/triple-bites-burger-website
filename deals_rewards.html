@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIPLE BITES</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/deals_rewards.css">
+</head>
+
+<body>
+    <header>
+        <!-- NAVIGATION BAR -->
+        <div class="nav-bar">
+            <img id="nav-logoIcon" src="images/logo.png" alt="Triple Bites Logo">
+            
+            <div id="nav-profileBox" class="nav-floating-profile">
+                <div class="nav-profile-header">
+                    <img id="nav-floatingProfilePic" src="images/cat_profile.png" alt="User Profile" class="nav-profile-pic">
+                    <div>
+                        <div id="nav-profileName" class="nav-profile-name">Username</div>
+                        <div id="nav-profileId" class="nav-profile-id">ID: #0001</div>
+                    </div>
+                </div>
+                
+                <div class="nav-profile-links">
+                    <a href="cart.html" class="nav-profile-link">Track Order</a>
+                    <a href="account.html" class="nav-profile-link">Edit Profile</a>
+                    <button id="nav-logoutBtn" class="nav-logout-btn">Logout</button>
+                </div>
+            </div>
+            
+            <nav>
+                <ul class="top-nav" id="top-nav-r">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="deals_rewards.html" class="active">Deals & Rewards</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li class="menu-bar" onclick="navFunction()">
+                        <a href="javascript:void(0);">
+                            <img src="images/menu_bar.png" alt="Menu Bar" title="Menu Bar" style="width:25px">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- PAGE HEADER -->
+        <div class="page-header">
+            <h1>PROMOS</h1>
+            
+            <div class="right-col">
+                <div class="search-box" title="Search">
+                    <input type="text" placeholder="Search products..." class="search-input">
+                    <button class="search-icon">
+                        <img src="images/search_icon.png" alt="Search">
+                    </button>
+                </div>
+                
+                <a href="cart.html" class="cart" title="View Cart">
+                    <img src="images/cart_icon.png" alt="Cart">
+                    <span id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- MAIN CONTENT AREA -->
+        <div class="main_content">
+            <!-- SPECIALS SECTION -->
+            <div class="specials">
+                <div class="view-section-heading">
+                    <h2 id="section-heading">SPECIALS</h2>
+                </div>
+                
+                <div class="deals">
+                    <!-- MONDAY DEAL -->
+                    <div class="deal">
+                        <h3>MONDAY SAVINGS</h3>
+                        <img src="images/fried chicken.png" alt="5 Pieces Chicken">
+                        <p class="item_name">5 Pieces Chicken</p>
+                        <p class="item_price"><strong>RM 20.00</strong></p>
+                        <button class="add-to-cart-btn" title="Add to Cart">
+                            <img src="images/white_addcart_icon.png" alt="Add To Cart">
+                            <span>Order Now</span>
+                        </button>
+                    </div>
+                    
+                    <!-- WEDNESDAY DEAL -->
+                    <div class="deal">
+                        <h3>WEDNESDAY SAVINGS</h3>
+                        <img src="images/fish set.png" alt="Filet-O-Fish Set">
+                        <p class="item_name">Filet-O-Fish SET</p>
+                        <p class="item_price"><strong>RM 10.59</strong></p>
+                        <button class="add-to-cart-btn" title="Add to Cart">
+                            <img src="images/white_addcart_icon.png" alt="Add To Cart">
+                            <span>Order Now</span>
+                        </button>
+                    </div>
+                    
+                    <!-- FRIDAY DEAL -->
+                    <div class="deal">
+                        <h3>FRIDAY SAVINGS</h3>
+                        <img src="images/sundae.png" alt="2 Flavour Sundae">
+                        <p class="item_name">2 Flavour Sundae</p>
+                        <p class="item_price"><strong>RM 5.90</strong></p>
+                        <button class="add-to-cart-btn" title="Add to Cart">
+                            <img src="images/white_addcart_icon.png" alt="Add To Cart">
+                            <span>Order Now</span>
+                        </button>
+                    </div>
+                    
+                    <!-- SUNDAY DEAL -->
+                    <div class="deal">
+                        <h3>SUNDAY SAVINGS</h3>
+                        <img src="images/nugget.png" alt="8 Pieces Nuggets">
+                        <p class="item_name">8 Pieces Nuggets</p>
+                        <p class="item_price"><strong>RM 10.25</strong></p>
+                        <button class="add-to-cart-btn" title="Add to Cart">
+                            <img src="images/white_addcart_icon.png" alt="Add To Cart">
+                            <span>Order Now</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- REWARDS SECTION -->
+            <div class="specials reward-section">
+                <div class="view-section-heading">
+                    <h2 id="section-heading">REWARDS</h2>
+                </div>
+                
+                <div class="deals">
+                    <!-- APPLE PIE REWARD -->
+                    <div class="deal">
+                        <h3>APPLE PIE TREAT</h3>
+                        <img src="images/apple pie.png" alt="Apple Pie">
+                        <p class="item_name">Hot Apple Pie</p>
+                        <p class="item_price"><strong>FREE</strong></p>
+                        <button class="redeem-btn" title="Redeem Reward">
+                            <img src="images/gift_icon.png" alt="Redeem">
+                            <span>Redeem Now</span>
+                        </button>
+                    </div>
+                    
+                    <!-- FRIES REWARD -->
+                    <div class="deal">
+                        <h3>FRIES BONUS</h3>
+                        <img src="images/fries.jpeg" alt="French Fries">
+                        <p class="item_name">Regular French Fries</p>
+                        <p class="item_price"><strong>FREE</strong></p>
+                        <button class="redeem-btn" title="Redeem Reward">
+                            <img src="images/gift_icon.png" alt="Redeem">
+                            <span>Redeem Now</span>
+                        </button>
+                    </div>
+                    
+                    <!-- MILO REWARD -->
+                    <div class="deal">
+                        <h3>ICED MILO BONUS</h3>
+                        <img src="images/milo.png" alt="Iced Milo">
+                        <p class="item_name">Regular Iced Milo</p>
+                        <p class="item_price"><strong>FREE</strong></p>
+                        <button class="redeem-btn" title="Redeem Reward">
+                            <img src="images/gift_icon.png" alt="Redeem">
+                            <span>Redeem Now</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <ul class="bottom-nav">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="deals_rewards.html">DEALS & REWARDS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="account.html">ACCOUNT</a></li>
+        </ul>
+        
+        <div class="footer-wrapper">
+            <div class="logo2">
+                <img src="images/logo.png" alt="Triple Bites Logo">
+            </div>
+            
+            <div class="hours">
+                <p>OPENING HOURS</p>
+                <p>
+                    MON-FRI: 10:00 AM - 10:00 PM<br><br>
+                    SAT-SUN: 11:00 AM - 11:00 PM
+                </p>
+            </div>
+            
+            <div class="contact">
+                <p>CONTACT</p>
+                <a href="https://www.whatsapp.com/" target="_blank">
+                    <img src="images/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="images/youtube.png" alt="Youtube">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="message" class="message">
+        <p></p>
+    </div>
+
+    <script src="js/basic.js"></script>
+    <script src="js/deals_rewards.js"></script>
+</body>
+</html>

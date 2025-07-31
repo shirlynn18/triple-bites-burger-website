@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIPLE BITES</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+    <header>
+        <!-- Top Navigation Bar -->
+        <div class="nav-bar">
+            <!-- Clickable logo -->
+            <img id="nav-logoIcon" src="images/logo.png" alt="Triple Bites Logo">
+
+            <div id="nav-profileBox" class="nav-floating-profile">
+                <div class="nav-profile-header">
+                    <img id="nav-floatingProfilePic" src="images/cat_profile.png" alt="User Profile" class="nav-profile-pic">
+                    <div>
+                        <div id="nav-profileName" class="nav-profile-name">Username</div>
+                        <div id="nav-profileId" class="nav-profile-id">ID: #0001</div>
+                    </div>
+                </div>
+
+                <div class="nav-profile-links">
+                    <a href="cart.html" class="nav-profile-link">Track Order</a>
+                    <a href="account.html" class="nav-profile-link">Edit Profile</a>
+                    <button id="nav-logoutBtn" class="nav-logout-btn">Logout</button>
+                </div>
+            </div>
+
+            <nav>
+                <ul class="top-nav" id="top-nav-r">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="deals_rewards.html">Deals & Rewards</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li class="menu-bar" onclick="navFunction()">
+                        <a href="javascript:void(0);">
+                            <img src="images/menu_bar.png" alt="Menu Bar" title="Menu Bar" style="width: 25px">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>OUR MENU</h1>
+            
+            <div class="right-col">
+                <div class="search-box" title="Search">
+                    <input type="text" placeholder="Search products..." class="search-input">
+                    <button class="search-icon"><img src="images/search_icon.png" alt="Search"></button>
+                </div>
+
+                <a href="cart.html" class="cart" title="View Cart">
+                    <img src="images/cart_icon.png" alt="Cart">
+                    <span id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="menu-wrapper">
+        <button class="sidebar-btn" onclick="toggleSidebar()" title="Categories">
+            <img id="arrow_icon" src="images/arrow_icon.png" alt="Categories">
+        </button>
+
+        <nav class="menu-sidebar">
+            <ul>
+                <li><a href="#burgers"><img src="images/burger_icon.png" alt="Burgers">Burgers</a></li>
+                <li><a href="#fried-chickens"><img src="images/chicken_icon.png" alt="Fried Chicken">Fried Chicken</a></li>
+                <li><a href="#beverages"><img src="images/drink_icon.png" alt="Beverages">Beverages</a></li>
+                <li><a href="#desserts"><img src="images/dessert_icon.png" alt="Desserts">Desserts</a></li>
+                <li><a href="#sides"><img src="images/sides_icon.png" alt="Sides">Sides</a></li>
+            </ul>
+        </nav>
+        
+        <main class="menu-main">
+            <div id="burgers" class="menu-category">
+                <h2>BURGERS</h2>
+
+                <div class="product-grid">
+                    <div class="product-card" title="Sunny Stack Burger">
+                        <a href="product_info.html?id=burger1">
+                            <img src="images/burger1.png" alt="Sunny Stack Burger">
+                            <figcaption>Sunny Stack Burger<br><span>RM 14.99</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Blazing Triple Bites">
+                        <a href="product_info.html?id=burger2">
+                            <img src="images/burger2.png" alt="Blazing Triple Bites">
+                            <figcaption>Blazing Triple Bites<br><span>RM 16.99</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Vegan Delight Burger">
+                        <a href="product_info.html?id=burger3">
+                            <img src="images/burger3.png" alt="Vegan Delight Burger">
+                            <figcaption>Vegan Delight Burger<br><span>RM 15.99</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Chicken Burger">
+                        <a href="product_info.html?id=burger4">
+                            <img src="images/burger4.png" alt="Chicken Burger">
+                            <figcaption>Chicken Burger<br><span>RM 6.90</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Grilled Chicken Burger">
+                        <a href="product_info.html?id=burger5">
+                            <img src="images/burger5.png" alt="Grilled Chicken Burger">
+                            <figcaption>Grilled Chicken Burger<br><span>RM 13.30</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Filet-O-Fish">
+                        <a href="product_info.html?id=burger6">
+                            <img src="images/burger6.png" alt="Filet-O-Fish">
+                            <figcaption>Filet-O-Fish<br><span>RM 9.30</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Beef Burger">
+                        <a href="product_info.html?id=burger7">
+                            <img src="images/burger7.png" alt="Beef Burger">
+                            <figcaption>Beef Burger<br><span>RM 6.90</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Cheeseburger">
+                        <a href="product_info.html?id=burger8">
+                            <img src="images/burger8.png" alt="Cheeseburger">
+                            <figcaption>Cheeseburger<br><span>RM 7.80</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Double Cheeseburger">
+                        <a href="product_info.html?id=burger9">
+                            <img src="images/burger9.png" alt="Double Cheeseburger">
+                            <figcaption>Double Cheeseburger<br><span>RM 11.20</span></figcaption>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="fried-chickens" class="menu-category">
+                <h2>FRIED CHICKEN</h2>
+
+                <div class="product-grid">
+                    <div class="product-card" title="3 Pieces Chicken">
+                        <a href="product_info.html?id=chicken1">
+                            <img src="images/chicken1.png" alt="3 Pieces Chicken">
+                            <figcaption>3 Pieces Chicken<br><span>RM 20.99</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="5 Pieces Chicken">
+                        <a href="product_info.html?id=chicken2">
+                            <img src="images/chicken2.png" alt="5 Pieces Chicken">
+                            <figcaption>5 Pieces Chicken<br><span>RM 31.99</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="8 Pieces Chicken">
+                        <a href="product_info.html?id=chicken3">
+                            <img src="images/chicken3.png" alt="8 Pieces Chicken">
+                            <figcaption>8 Pieces Chicken<br><span>RM 51.99</span></figcaption>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="beverages" class="menu-category">
+                <h2>BEVERAGES</h2>
+
+                <div class="product-grid">
+                    <div class="product-card" title="Iced Milo (Large)">
+                        <a href="product_info.html?id=beverage1">
+                            <img src="images/beverage1.png" alt="Iced Milo (Large)">
+                            <figcaption>Iced Milo<br><span>RM 5.30</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Coca-Cola (Large)">
+                        <a href="product_info.html?id=beverage2">
+                            <img src="images/beverage2.png" alt="Coca-Cola (Large)">
+                            <figcaption>Coca-Cola<br><span>RM 4.80</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Sprite (Large">
+                        <a href="product_info.html?id=beverage3">
+                            <img src="images/beverage3.png" alt="Sprite (Large">
+                            <figcaption>Sprite<br><span>RM 4.80</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Hot Nescafe">
+                        <a href="product_info.html?id=beverage4">
+                            <img src="images/beverage4.png" alt="Hot Nescafe">
+                            <figcaption>Hot Nescafe<br><span>RM 4.99</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Hot Teh Tarik">
+                        <a href="product_info.html?id=beverage5">
+                            <img src="images/beverage5.png" alt="Hot Teh Tarik">
+                            <figcaption>Hot Teh Tarik<br><span>RM 5.60</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Hot Neslo">
+                        <a href="product_info.html?id=beverage6">
+                            <img src="images/beverage6.png" alt="Hot Neslo">
+                            <figcaption>Hot Neslo<br><span>RM 5.60</span></figcaption>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="desserts" class="menu-category">
+                <h2>DESSERTS</h2>
+
+                <div class="product-grid">
+                    <div class="product-card" title="Chocolate Sundae">
+                        <a href="product_info.html?id=dessert1">
+                            <img src="images/dessert1.png" alt="Chocolate Sundae">
+                            <figcaption>Chocolate Sundae<br><span>RM 4.90</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Strawberry Sundae">
+                        <a href="product_info.html?id=dessert2">
+                            <img src="images/dessert2.png" alt="Strawberry Sundae">
+                            <figcaption>Strawberry Sundae<br><span>RM 4.90</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Sundae Cone">
+                        <a href="product_info.html?id=dessert3">
+                            <img src="images/dessert3.png" alt="Sundae Cone">
+                            <figcaption>Sundae Cone<br><span>RM 1.50</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Apple Pie">
+                        <a href="product_info.html?id=dessert4">
+                            <img src="images/dessert4.png" alt="Apple Pie">
+                            <figcaption>Apple Pie<br><span>RM 5.90</span></figcaption>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sides" class="menu-category">
+                <h2>SIDES</h2>
+
+                <div class="product-grid">
+                    <div class="product-card" title="Fries">
+                        <a href="product_info.html?id=side1">
+                            <img src="images/side1.png" alt="Fries">
+                            <figcaption>Fries<br><span>RM 6.10</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Mashed Potato">
+                        <a href="product_info.html?id=side2">
+                            <img src="images/side2.png" alt="Mashed Potato">
+                            <figcaption>Mashed Potato<br><span>RM 3.99</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="Coleslaw">
+                        <a href="product_info.html?id=side3">
+                            <img src="images/side3.png" alt="Coleslaw">
+                            <figcaption>Coleslaw<br><span>RM 3.99</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="8 Pieces Nuggets">
+                        <a href="product_info.html?id=side4">
+                            <img src="images/side4.png" alt="8 Pieces Nuggets">
+                            <figcaption>8 Pieces Nuggets<br><span>RM 12.20</span></figcaption>
+                        </a>
+                    </div>
+
+                    <div class="product-card" title="12 Pieces Nuggets">
+                        <a href="product_info.html?id=side5">
+                            <img src="images/side5.png" alt="12 Pieces Nuggets">
+                            <figcaption>12 Pieces Nuggets<br><span>RM 16.90</span></figcaption>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="bottom-nav">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="deals_rewards.html">DEALS & REWARDS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="account.html">ACCOUNT</a></li>
+        </ul>
+
+        <div class="footer-wrapper">
+            <div class="logo2">
+                <img src="images/logo.png" alt="Triple Bites Logo">
+            </div>
+
+            <div class="hours">
+                <p>OPENING HOURS</p>
+                <P>
+                    MON-FRI: 10:00 AM - 10:00 PM<br><br>
+                    SAT-SUN: 11:00 AM - 11:00 PM
+                </P>
+            </div>
+
+            <div class="contact">
+                <p>CONTACT</p>
+                <a href="https://www.whatsapp.com/" target="_blank">
+                    <img src="images/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="images/youtube.png" alt="Youtube">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/basic.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

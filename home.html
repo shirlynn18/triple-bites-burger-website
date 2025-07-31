@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIPLE BITES</title>
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/login_signup.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+</head>
+
+<body>
+    <header>
+        <!-- Top Navigation Bar -->
+        <div class="nav-bar">
+            <!-- Clickable logo -->
+            <img id="nav-logoIcon" src="images/logo.png" alt="Triple Bites Logo">
+
+            <div id="nav-profileBox" class="nav-floating-profile">
+                <div class="nav-profile-header">
+                    <img id="nav-floatingProfilePic" src="images/cat_profile.png" alt="User Profile" class="nav-profile-pic">
+                    <div>
+                        <div id="nav-profileName" class="nav-profile-name">Username</div>
+                        <div id="nav-profileId" class="nav-profile-id">ID: #0001</div>
+                    </div>
+                </div>
+                
+                <div class="nav-profile-links">
+                    <a href="cart.html" class="nav-profile-link">Track Order</a>
+                    <a href="account.html" class="nav-profile-link">Edit Profile</a>
+                    <button id="nav-logoutBtn" class="nav-logout-btn">Logout</button>
+                </div>
+            </div>
+
+            <nav>
+                <ul class="top-nav" id="top-nav-r">
+                    <li><a href="home.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="deals_rewards.html">Deals & Rewards</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li class="menu-bar" onclick="navFunction()">
+                        <a href="javascript:void(0);">
+                            <img src="images/menu_bar.png" alt="Menu Bar" title="Menu Bar" style="width: 25px">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>HOME</h1>
+            
+            <div class="right-col">
+                <div class="search-box" title="Search">
+                    <input type="text" placeholder="Search products..." class="search-input">
+                    <button class="search-icon"><img src="images/search_icon.png" alt="Search"></button>
+                </div>
+
+                <a href="cart.html" class="cart" title="View Cart">
+                    <img src="images/cart_icon.png" alt="Cart">
+                    <span id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Get Hungry? <br> Get Triple Bites.</h1>
+                <p class="hero-subtitle">Triple-stacked, triple-dripped, triple delicious.</p>
+            </div>
+
+            <div class="hero-image">
+                <img src="images/hero.png" alt="hero image" class="floating-burger">
+            </div>
+        </section>
+
+        <!-- About Us Section-->
+        <section class="about-section">
+            <div class="view-section-heading">
+                <h2 id="section-heading">About Us</h2>
+            </div>
+
+            <div class="about-content">
+                <div class="about-container">
+                    <div class="about-image">
+                        <img src="images/about.png" alt="About Triple Bites" />
+                    </div>
+
+                    <div class="about-text">
+                        <h2>Welcome to Triple Bites</h2>
+                        <p>
+                            At Triple Bites, we believe that food is not just about sustenance; it's about creating memorable experiences. 
+                            Our mission is to serve delicious, high-quality burgers that bring joy to every bite. 
+                            We are passionate about using fresh ingredients and innovative recipes to craft mouthwatering burgers that cater to all tastes.
+                        </p>
+                        <p>
+                            Our team is dedicated to providing exceptional service and ensuring that every visit is a delightful experience. 
+                            Whether you're here for a quick meal or a special occasion, we strive to make your time with us unforgettable.
+                        </p>
+                        <p>
+                            Join us on this culinary journey and discover the flavors that make Triple Bites a favorite among burger lovers!
+                        </p>
+                        <a href="about.html" class="about-button">Explore Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Burgers Release Section-->
+        <section class="new-burgers">
+            <div class="view-section-heading">
+                <h2 id="section-heading">New Burgers Release</h2>
+                <a href="menu.html" class="view-all-link">View All →</a>
+            </div>
+
+            <div class="new-burgers-release" id="new-burgers">
+                <div class="burger-image burger-display">
+                    <img src="images/new_sunny.png" alt="Sunny Stack Burger">
+                </div>
+
+                <div class="main-burger burger-display">
+                    <h2 id="burger-title">Sunny Stack Burger</h2>
+                    <p id="burger-description">
+                        Start your day right with our hearty breakfast burger packed with a golden fried egg,
+                        crispy bacon, and juicy sausage—all stacked between our signature buns. Morning bliss in every bite!
+                    </p>
+                    <div class="price" id="burger-price">$14.99</div>
+                    <div class="buttons">
+                        <button class="primary-btn" onclick="viewBurger()">
+                            <img src="images/fork_icon.png" alt="Try">
+                            Try Now
+                        </button>
+                        <button class="secondary-btn" onclick="addToCart()">
+                            <img src="images/addcart_icon.png" alt="Order">
+                            Order Now
+                        </button>
+                    </div>
+                </div>
+
+                <div class="burger-icons">
+                    <img src="images/burger1.png" alt="Sunny Burger" onclick="showBurger(0)" onmouseenter="previewBurger(0)">
+                    <img src="images/burger2.png" alt="Spicy Burger" onclick="showBurger(1)" onmouseenter="previewBurger(1)">
+                    <img src="images/burger3.png" alt="Vegan Burger" onclick="showBurger(2)" onmouseenter="previewBurger(2)">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Menu Section -->
+        <section class="featured-menu">
+            <div class="view-section-heading">
+                <h2 id="section-heading">Featured Menu</h2>
+                <a href="menu.html" class="view-all-link">View All →</a>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="images/grilled_chicken.svg" alt="Grilled Chicken Burger" class="menu-img">
+                    <h3>Grilled Chicken Burger</h3>
+                    <div class="menu-overlay">
+                        <h3>Grilled Chicken Burger</h3>
+                        <p>Juicy grilled chicken patty with fresh lettuce, tomato, and special sauce.</p>
+                        <a href="product_info.html?id=burger5" class="view-btn" title="Add To Cart">
+                            <img src="images/white_addcart_icon.png" alt="Add To Cart">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/fish_burger.svg" alt="Fish Burger" class="menu-img">
+                    <h3>Filet-O-Fish Burger</h3>
+                    <div class="menu-overlay">
+                        <h3>Filet-O-Fish Burger</h3>
+                        <p>Crispy battered fish fillet with tartar sauce, lettuce, and tomato on a soft bun.</p>
+                        <a href="product_info.html?id=burger6" class="view-btn" title="Add To Cart">
+                            <img src="images/white_addcart_icon.png" alt="Add To Cart">
+                            Order Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/double_cheese_burger.svg" alt="Double Cheese Burger" class="menu-img">
+                    <h3>Double Cheese Burger</h3>
+                    <div class="menu-overlay">
+                        <h3>Double Cheese Burger</h3>
+                        <p>Two juicy beef patties layered with melted cheddar, topped with our signature sauce, fresh lettuce, and tomato—this is the ultimate cheesy indulgence.</p>
+                        <a href="product_info.html?id=burger9" class="view-btn" title="Add To Cart">
+                            <img src="images/white_addcart_icon.png" alt="Add To Cart">
+                            Order Now
+                        </a>                    
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/fried_chicken.svg" alt="Fried Chicken" class="menu-img">
+                    <h3>Fried Chicken</h3>
+                    <div class="menu-overlay">
+                        <h3>Fried Chicken</h3>
+                        <p>Juicy, tender chicken coated in our secret-seasoned batter and fried to golden perfection. Every bite is packed with crunch and flavor that keeps you coming back for more.</p>
+                        <a href="product_info.html?id=chicken1" class="view-btn" title="Add To Cart">
+                            <img src="images/white_addcart_icon.png" alt="Add To Cart">
+                            Order Now
+                        </a>                      
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/apple_pie.svg" alt="Apple Pie" class="menu-img">
+                    <h3>Apple Pie</h3>
+                    <div class="menu-overlay">
+                        <h3>Apple Pie</h3>
+                        <p>Sweet, warm, and irresistibly crispy. Our golden-baked apple pie is filled with cinnamon-spiced apple chunks in a flaky crust—perfect as a treat any time of day.</p>
+                        <a href="product_info.html?id=dessert4" class="view-btn" title="Add To Cart">
+                            <img src="images/white_addcart_icon.png" alt="Add To Cart">
+                            Order Now
+                        </a>                      
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/nuggets.svg" alt="Chicken Nuggets" class="menu-img">
+                    <h3>Nuggets</h3>
+                    <div class="menu-overlay">
+                        <h3>Nuggets</h3>
+                        <p>Golden and crispy on the outside, juicy on the inside — perfect for dipping into our mouthwatering BBQ sauce.</p>
+                        <a href="product_info.html?id=side4" class="view-btn" title="Add To Cart">
+                            <img src="images/white_addcart_icon.png" alt="Add To Cart">
+                            Order Now
+                        </a>                      
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews-section">
+            <div class="view-section-heading">
+                <h2 id="section-heading">Hear the Bites</h2>
+            </div>
+
+            <p class="subtitle">See what our customers have to say about us.</p>
+
+            <div class="reviews-wrapper">
+                <article class="review-card" tabindex="0" aria-label="Customer review: Very Tasty">
+                    <div class="review-stars" aria-hidden="true">★★★★★</div>
+                    <h3 class="review-topic">
+                        Perfect Combo
+                    </h3>                
+                    <p class="review-text">
+                        "Fries crispy, burger juicy, drink cold. What more can you ask for? Triple perfection."
+                    </p>
+                    <div class="reviewer">
+                        <img
+                            src="images/reviewer1.png"
+                            alt="Portrait of Jessy Talia, a smiling customer with short brown hair and glasses"
+                            class="reviewer-img" 
+                        >
+                        <span>Jessy Talia</span>
+                    </div>
+                </article>
+
+                <article class="review-card featured" tabindex="0" aria-label="Customer review: Amazing highlight">
+                    <div class="review-stars" aria-hidden="true">★★★★★</div>
+                    <h3 class="review-topic">
+                        Awesome
+                    </h3>
+                    <p class="review-text">
+                        "Every bite was a flavor explosion! Triple Bites is my new go-to for burger cravings. 10/10!"                
+                    </p>
+                    <div class="reviewer">
+                        <img
+                            src="images/reviewer2.png"
+                            alt="Portrait of Michael Yanko, a cheerful middle-aged customer with light brown hair and a subtle beard"
+                            class="reviewer-img"
+                        >
+                        <span>Michael Yanko</span>
+                    </div>
+                </article>
+
+                <article class="review-card" tabindex="0" aria-label="Customer review: Viewpoint">
+                    <div class="review-stars" aria-hidden="true">★★★★★</div>
+                    <h3 class="review-topic">
+                        Forever Fan
+                    </h3>
+                    <p class="review-text">
+                        "Didn't expect much… but wow. Now I get what the buzz is about. I'm hooked."
+                    </p>
+                    <div class="reviewer">
+                        <img
+                        src="images/reviewer3.png"
+                        alt="Portrait of Adam Murr, a customer with short dark hair and glasses, friendly expression"
+                        class="reviewer-img"
+                        >
+                        <span>Adam Murr</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Coming Soon Section -->
+        <section class="coming-soon">
+            <div class="view-section-heading">
+                <h2 id="section-heading">Coming Soon</h2>
+            </div>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <img src="images/challenge_burger.svg" alt="Ultimate Burger Challenge" loading="lazy"/>
+                    <div class="card-content">
+                        <div class="card-title">Ultimate Burger Challenge</div>
+                        <p class="card-desc">
+                            Get ready for the feast of the year!
+                            <br>Think you've got what it takes to conquer our Ultimate Burger Challenge?
+                            <br>Triple Bites is hosting a Big Eater Showdown, where burger lovers battle the
+                            clock—and their appetite—for a shot at glory, prizes, and a spot on our Wall
+                            of Fame!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/Pusheen.svg" alt="Collab with Pusheen" loading="lazy"/>
+                    <div class="card-content">
+                        <div class="card-title">Triple Bites x Pusheen</div>
+                        <p class="card-desc">
+                            Your favorite burger meets your favorite cat!
+                            <br>We're teaming up with Pusheen for an exclusive collab — expect cute limited-edition 
+                            packaging, a Pusheen-themed burger box, plus adorable T-shirts, tote bags, and stickers.
+                            <br>Only available for a limited time!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/mystery.svg" alt="Mystery box" loading="lazy"/>
+                    <div class="card-content">
+                        <div class="card-title">Mystery Combo Meal</div>
+                        <p class="card-desc">
+                            Feeling adventurous?
+                            <br>Try our Mystery Combo — a surprise burger, mystery side, and secret drink combo.
+                            <br>You won't know what you're getting… but it'll always be tasty, fun, and totally worth the risk.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="bottom-nav">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="deals_rewards.html">DEALS & REWARDS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="account.html">ACCOUNT</a></li>
+        </ul>
+
+        <div class="footer-wrapper">
+            <div class="logo2">
+                <img src="images/logo.png" alt="Triple Bites Logo">
+            </div>
+
+            <div class="hours">
+                <p>OPENING HOURS</p>
+                <P>
+                    MON-FRI: 10:00 AM - 10:00 PM<br><br>
+                    SAT-SUN: 11:00 AM - 11:00 PM
+                </P>
+            </div>
+
+            <div class="contact">
+                <p>CONTACT</p>
+                <a href="https://www.whatsapp.com/" target="_blank">
+                    <img src="images/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="images/youtube.png" alt="Youtube">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login & Sign Up Modal Container -->
+    <div id="popupModal" class="auth-modal" style="display: none;">
+        <div class="auth-wrapper">
+            <div class="auth-modal-content">
+                <span class="auth-close" onclick="closeModal()">&times;</span>
+
+                <!-- Login Form -->
+                <div id="loginFormContainer" class="form-container">
+                    <div class="container" aria-label="Login form for Triple Bites">
+                        <header>
+                            <div class="brand">
+                                <img src="images/logo_noname.png" alt="Triple Bites Logo" class="auth-logo">
+                                <br>TRIPLE BITES
+                            </div>
+                            <h1>Login</h1>
+                        </header>
+
+                        <section>
+                            <form id="login-form" novalidate>
+                                <div class="input-group">
+                                    <input type="text" id="login-username" name="username" placeholder=" " required autocomplete="username" />
+                                    <label for="login-username">Username</label>
+                                    <img src="images/person_icon.png" alt="User Icon" class="icon">
+                                </div>
+                                
+                                <div class="input-group">
+                                    <input type="password" id="login-password" name="password" placeholder=" " required autocomplete="current-password" />
+                                    <label for="login-password">Password</label>
+                                    <img src="images/lock_icon.png" alt="Lock Icon" class="icon">
+                                </div>
+
+                                <input type="submit" value="Login"/>
+                            </form>
+                        </section>
+
+                        <div class="form-footer">
+                            <p>Haven't registered yet? <a href="#signup" class="modal-link" onclick="showSignupForm()">Create account</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sign Up Form -->
+                <div id="signupFormContainer" class="form-container" style="display: none;">
+                    <div class="container" aria-label="Sign Up form for Triple Bites">
+                        <header>
+                            <div class="brand">
+                                <img src="images/logo_noname.png" alt="Triple Bites Logo" class="auth-logo">
+                                <br>TRIPLE BITES
+                            </div>
+                            <h1 class="signup-h1">Sign Up</h1>
+                        </header>
+
+                        <section>
+                            <form id="signup-form" novalidate>
+                                <div class="input-group">
+                                    <input type="text" id="signup-username" name="username" placeholder=" " required autocomplete="username" />
+                                    <label for="signup-username">Username</label>
+                                    <img src="images/person_icon.png" alt="User Icon" class="icon">
+                                    <div id="signup-username-error"></div>
+                                </div>
+
+                                <div class="input-group">
+                                    <input type="email" id="email" name="email" placeholder=" " required autocomplete="email" />
+                                    <label for="email">Email</label>
+                                    <img src="images/mail_icon.png" alt="Email Icon" class="icon">
+                                    <div id="email-error"></div>
+                                </div>
+
+                                <div class="input-group">
+                                    <input type="tel" id="phone" name="phone" placeholder=" " maxlength="14" required autocomplete="tel" />
+                                    <label for="phone">Phone Number</label>
+                                    <img src="images/phone_icon.png" alt="Phone Icon" class="icon">
+                                    <div id="phone-error"></div>
+                                </div>
+
+                                <div class="input-group">
+                                    <input type="password" id="password" name="password" placeholder=" " minlength="8" required autocomplete="new-password" />
+                                    <label for="password">Password</label>
+                                    <img src="images/lock_icon.png" alt="Lock Icon" class="icon">
+                                    <div id="password-error"></div>
+                                </div>
+                                
+                                <input type="submit" value="Sign Up"/>
+                            </form>
+                        </section>
+
+                        <div class="form-footer">
+                            <p>Already have an account? <a href="#login" class="modal-link" onclick="showLoginForm()">Login</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/basic.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/signup.js"></script>
+</body>
+</html>

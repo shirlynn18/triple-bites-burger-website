@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIPLE BITES</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/basic.css">
+    <link rel="stylesheet" href="css/product_info.css">
+</head>
+
+<body>
+    <header>
+        <!-- Top Navigation Bar -->
+        <div class="nav-bar">
+            <!-- Clickable logo -->
+            <img id="nav-logoIcon" src="images/logo.png" alt="Triple Bites Logo">
+
+            <div id="nav-profileBox" class="nav-floating-profile">
+                <div class="nav-profile-header">
+                    <img id="nav-floatingProfilePic" src="images/cat_profile.png" alt="User Profile" class="nav-profile-pic">
+                    <div>
+                        <div id="nav-profileName" class="nav-profile-name">Username</div>
+                        <div id="nav-profileId" class="nav-profile-id">ID: #0001</div>
+                    </div>
+                </div>
+                
+                <div class="nav-profile-links">
+                    <a href="cart.html" class="nav-profile-link">Track Order</a>
+                    <a href="account.html" class="nav-profile-link">Edit Profile</a>
+                    <button id="nav-logoutBtn" class="nav-logout-btn">Logout</button>
+                </div>
+            </div>
+
+            <nav>
+                <ul class="top-nav" id="top-nav-r">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="menu.html" class="active">Menu</a></li>
+                    <li><a href="deals_rewards.html">Deals & Rewards</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li class="menu-bar" onclick="navFunction()">
+                        <a href="javascript:void(0);">
+                            <img src="images/menu_bar.png" alt="Menu Bar" title="Menu Bar" style="width: 25px">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="left_col">
+                <a href="menu.html" class="back" title="Back to Menu">
+                    <img src="images/back_icon.png" alt="Back">
+                    <h1>BACK</h1>
+                </a>
+            </div>
+            
+            <div class="right-col">
+                <div class="search-box" title="Search">
+                    <input type="text" placeholder="Search products..." class="search-input">
+                    <button class="search-icon"><img src="images/search_icon.png" alt="Search"></button>
+                </div>
+
+                <a href="cart.html" class="cart" title="View Cart">
+                    <img src="images/cart_icon.png" alt="Cart">
+                    <span id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="info-wrapper">
+        <div class="product-image">
+            <img src="images/burger9.png" alt="Double Cheeseburger">
+        </div>
+
+        <div class="product-details">
+            <h2>Double Cheeseburger</h2>
+            <p class="price">RM 11.20</p>
+            <p class="ingredients">Ingredients:<br>
+               regular bun, 2 beef patties, 2 slices of cheddar cheese, pickles, onions, ketchup, and mustard
+            </p>
+
+            <div class="dropdown">
+                <div class="dropdown-header" onclick="toggleDropdown(this)">
+                    <span>Add-ons (Extra)</span>
+                    <img src="images/down_icon.png" class="down-icon" alt="Toggle">
+                </div>
+
+                <div class="dropdown-body">
+                    <div class="check-box">
+                        <span>Extra Cheddar Cheese</span>
+                        <span class="charge">(+RM 1.00)</span>
+                        <div class="checkbox-wrap">
+                            <input type="checkbox">
+                            <div class="custom-checkbox"></div>
+                        </div>
+                    </div>
+
+                    <div class="check-box">
+                        <span>Extra Beef Patty</span>
+                        <span class="charge">(+RM 3.00)</span>
+                        <div class="checkbox-wrap">
+                            <input type="checkbox">
+                            <div class="custom-checkbox"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <div class="dropdown-header" onclick="toggleDropdown(this)">
+                    <span>Remove Ingredients</span>
+                    <img src="images/down_icon.png" class="down-icon" alt="Toggle">
+                </div>
+
+                <div class="dropdown-body">
+                    <div class="check-box">
+                        <span>No Pickles</span>
+                        <div class="checkbox-wrap">
+                            <input type="checkbox">
+                            <div class="custom-checkbox"></div>
+                        </div>
+                    </div>
+
+                    <div class="check-box">
+                        <span>No Onions</span>
+                        <div class="checkbox-wrap">
+                            <input type="checkbox">
+                            <div class="custom-checkbox"></div>
+                        </div>
+                    </div>
+
+                    <div class="check-box">
+                        <span>No Ketchup</span>
+                        <div class="checkbox-wrap">
+                            <input type="checkbox">
+                            <div class="custom-checkbox"></div>
+                        </div>
+                    </div>
+
+                    <div class="check-box">
+                        <span>No Mustard</span>
+                        <div class="checkbox-wrap">
+                            <input type="checkbox">
+                            <div class="custom-checkbox"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="bottom-bar">
+        <div class="quantity-btn">
+            <span>Quantity</span>
+            <button id="decrement-btn" onclick="decrement()">-</button>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" max="5">
+            <button id="increment-btn" onclick="increment()">+</button>
+        </div>
+
+        <button class="add-btn" onclick="showMessage()">Add to Cart</button>
+    </div>
+
+    <div id="message" class="message">
+            <p></p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <ul class="bottom-nav">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="deals_rewards.html">DEALS & REWARDS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="account.html">ACCOUNT</a></li>
+        </ul>
+
+        <div class="footer-wrapper">
+            <div class="logo2">
+                <img src="images/logo.png" alt="Triple Bites Logo">
+            </div>
+
+            <div class="hours">
+                <p>OPENING HOURS</p>
+                <P>
+                    MON-FRI: 10:00 AM - 10:00 PM<br><br>
+                    SAT-SUN: 11:00 AM - 11:00 PM
+                </P>
+            </div>
+
+            <div class="contact">
+                <p>CONTACT</p>
+                <a href="https://www.whatsapp.com/" target="_blank">
+                    <img src="images/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="images/youtube.png" alt="Youtube">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/basic.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/product_info.js"></script>
+</body>
+</html>
